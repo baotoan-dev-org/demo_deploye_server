@@ -121,6 +121,6 @@ async function bootstrap() {
 
   await app.listen(configService.get('OFFICE_BE_PORT'));
 
-  Logger.log(`App running on ${await app.getUrl()}`);
+  Logger.log(`Test app running on ${await app.getUrl()}`);
 }
 bootstrap();
