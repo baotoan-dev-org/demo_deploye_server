@@ -1,0 +1,19 @@
+# Normalize line endings
+* text=auto
+
+# Treat images as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+
+# Lock files (e.g., yarn.lock or package-lock.json) — prefer union merge
+*.lock merge=union
+
+# Ignore these in git archive
+.env export-ignore
+docker-compose.override.yml export-ignore
+
+# Ensure TypeScript is counted correctly on GitHub
+*.ts linguist-language=TypeScript

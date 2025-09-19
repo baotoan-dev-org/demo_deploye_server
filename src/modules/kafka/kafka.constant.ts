@@ -1,0 +1,9 @@
+export const KAFKA_CONFIG = {
+  CLIENT_ID: 'office-be',
+  CONSUMER_GROUP_ID: 'office-be-consumer',
+  BOOTSTRAP_SERVERS: 'localhost:9092',
+  RETRY_ATTEMPTS: 5,
+  INITIAL_RETRY_TIME: 100,
+  MAX_RETRY_TIME: 30000,
+  TRANSACTION_TIMEOUT: 30000,
+} as const;

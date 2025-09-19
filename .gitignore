@@ -1,0 +1,64 @@
+# Node modules
+node_modules/
+
+# Environment files
+.env*
+!.env.example
+
+# Build output
+dist/
+build/
+.out/
+.next/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDEs & editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm/
+
+# Swagger generated files (if any)
+swagger.json
+swagger.yaml
+
+# PM2 process logs
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Docker
+docker-compose.override.yml
+docker-volume/
+opensearch_data
+mysql_data
+postgres_data
+redis_data
+
+# Other
+test.js
+.generate-types
+
+office-storage

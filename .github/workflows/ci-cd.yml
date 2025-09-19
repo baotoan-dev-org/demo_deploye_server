@@ -1,0 +1,41 @@
+name: CI-CD
+on:
+  push:
+    branches: ['develop', 'staging', 'production']
+
+jobs:
+  build_develop:
+    runs-on: [self-hosted, office-develop]
+    if: github.ref == 'refs/heads/develop'
+    steps:
+      - name: Build and run image for develop
+        run: |
+          cd ~/sources/office/office-be
+          git pull
+          cd ../office-docker
+          docker compose --env-file .env.develop up -d --build office-be
+          docker system prune -f
+
+  build_staging:
+    runs-on: [self-hosted, office-staging]
+    if: github.ref == 'refs/heads/staging'
+    steps:
+      - name: Build and run image for staging
+        run: |
+          cd ~/sources/office/office-be
+          git pull
+          cd ../office-docker
+          docker compose --env-file .env.staging up -d --build office-be
+          docker system prune -f
+
+  build_production:
+    runs-on: [self-hosted, office-production]
+    if: github.ref == 'refs/heads/production'
+    steps:
+      - name: Build and run image for production
+        run: |
+          cd ~/sources/office/office-be
+          git pull
+          cd ../office-docker
+          docker compose --env-file .env.production up -d --build office-be
+          docker system prune -f

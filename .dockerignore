@@ -1,0 +1,57 @@
+# Node modules & build artifacts
+node_modules
+dist
+build
+
+# Logs
+*.log
+logs
+
+# Env files
+.env*
+*.env
+
+# IDE & OS-specific files
+.vscode
+.idea
+*.swp
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Test & coverage
+coverage
+.nyc_output
+test
+__tests__
+
+# Git & CI/CD
+.git
+.github
+.gitignore
+
+# Docker-related
+Dockerfile*
+docker-compose*
+opensearch_data
+mysql_data
+postgres_data
+redis_data
+
+# Config files
+.eslintrc.*
+.eslintignore
+.prettierrc
+.prettierignore
+nest-cli.json
+
+# Local dev files
+README.md
+test.js
+swagger-theme.css
+.scripts
+.gitattributes
+jest.config.ts
+
+office-storage
