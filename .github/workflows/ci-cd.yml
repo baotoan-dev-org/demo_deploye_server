@@ -5,7 +5,7 @@ on:
 
 jobs:
   build_develop:
-    runs-on: self-hosted
+    runs-on: [self-hosted, office-server-01]
     if: github.ref == 'refs/heads/develop'
     steps:
       - name: Build and run image for develop
